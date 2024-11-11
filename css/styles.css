@@ -218,48 +218,6 @@
 }
 
 
-/* Estilos Footer */
-.footer {
-    background-color: #8E1515;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-
-.footer__nav {
-    display: flex;
-    flex-direction: column;
-}
-
-.lista {
-    list-style: none;
-    gap: 20px;
-}
-
-.lista__link {
-    padding: 10px;
-}
-
-.lista__a {
-    color: white;
-    padding: 10px;
-}
-
-.footer-legal {
-    color: white;
-    margin: 10px;
-}
-
-.legal__a {
-    color: white;
-
-}
-
-.copyright {
-    margin-top: 30px;
-}
-
 /* Estilos de seccion de donaciones y ayuda*/
 
 .donations__section {
@@ -385,6 +343,55 @@
     min-height: 100px; /* Establece una altura mínima para el textarea */
   }
 
+
+/* Estilo cuando el menú está abierto */
+.nav__ul.open {
+    display: flex;
+}
+
+
+/* Estilos Footer */
+.footer {
+    background-color: #8E1515;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista {
+    list-style: none;
+    gap: 20px;
+}
+
+.lista__link {
+    padding: 10px;
+}
+
+.lista__a {
+    color: white;
+    padding: 10px;
+}
+
+.footer-legal {
+    color: white;
+    margin: 10px;
+}
+
+.legal__a {
+    color: white;
+
+}
+
+.copyright {
+    margin-top: 30px;
+}
+
 @media (max-width: 768px) {
     .grid__item {
         width: 100%;
@@ -399,10 +406,43 @@
         display: block;
         /* Asegura que esté en formato de bloque para aplicar el margin correctamente */
     }
+    .nav__ul {
+        display: none;
+        /* Ocultamos el menú por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: #8E1515;
+        width: 200px;
+        border-radius: 8px;
+    }
+
+    .menu-icon {
+        display: block;
+        /* Mostramos el ícono del menú */
+        cursor: pointer;
+        color: white;
+    }
+
+    .nav__ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
 
 }
 
 @media (min-width: 768px) {
+    .main__content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+    }
+
     .menu-icon {
         display: none;
         /* Ocultamos el ícono de menú en pantallas grandes */
@@ -468,48 +508,7 @@
 
 }
 
-/* En dispositivos móviles (menos de 768px), ocultamos el navbar normal y mostramos el menú hamburguesa */
-@media (max-width: 767px) {
-    .nav__ul {
-        display: none;
-        /* Ocultamos el menú por defecto */
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        background-color: #8E1515;
-        width: 200px;
-        border-radius: 8px;
-    }
-
-    .menu-icon {
-        display: block;
-        /* Mostramos el ícono del menú */
-        cursor: pointer;
-        color: white;
-    }
-
-    .nav__ul li {
-        text-align: center;
-        margin: 10px 0;
-    }
-}
 
 
-/* Estilo cuando el menú está abierto */
-.nav__ul.open {
-    display: flex;
-}
 
-@media screen and (min-width: 768px) {
-    .main__content {
-        display: flex;
-        flex-direction: row;
-    }
 
-    .section {
-        display: flex;
-        flex-direction: column;
-    }
-
-}
